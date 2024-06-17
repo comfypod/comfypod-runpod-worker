@@ -50,7 +50,7 @@ jobs:
             img_path="ghcr.io/${{ env.PACKAGE_NAME }}"
 
             echo "Marking dev"
-            TAGS="${img_path}:dev, ${img_path}:dev-cpu, ${img_path}:dev-cpu-jupyter"
+            TAGS="${img_path}:dev-cpu, ${img_path}:dev-cpu-jupyter"
 
             echo "TAGS=${TAGS}" >> ${GITHUB_ENV}
       -
@@ -105,7 +105,7 @@ jobs:
           img_path="ghcr.io/${{ env.PACKAGE_NAME }}"
 
           echo "Marking dev"
-          TAGS="${img_path}:dev, ${img_path}:dev, ${img_path}:dev-jupyter, ${img_path}:dev-cuda, ${img_path}:dev-cuda-jupyter"
+          TAGS="${img_path}:dev, ${img_path}:dev-jupyter, ${img_path}:dev-cuda, ${img_path}:dev-cuda-jupyter"
 
           echo "TAGS=${TAGS}" >> ${GITHUB_ENV}
       -
@@ -159,7 +159,7 @@ jobs:
             img_path="ghcr.io/${{ env.PACKAGE_NAME }}"
 
             echo "Marking dev"
-            TAGS="${img_path}:dev, ${img_path}:dev-rocm, ${img_path}:dev-rocm-jupyter"
+            TAGS="${img_path}:dev-rocm, ${img_path}:dev-rocm-jupyter"
 
             echo "TAGS=${TAGS}" >> ${GITHUB_ENV}
       -
