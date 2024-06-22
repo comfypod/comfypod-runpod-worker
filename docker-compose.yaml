@@ -14,17 +14,8 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway"
 
-    ## For Nvidia GPU's - You probably want to uncomment this
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: 1
-              capabilities: [gpu]
-
-    devices:
-      - "/dev/dri:/dev/dri"
+    # devices:
+    #   - "/dev/dri:/dev/dri"
       ## For AMD GPU
       #- "/dev/kfd:/dev/kfd"
 
@@ -36,8 +27,8 @@ services:
 
       # Will echo to root-owned authorized_keys file;
       # Avoids changing local file owner
-      - ./config/authorized_keys:/root/.ssh/authorized_keys_mount
-      - ./config/provisioning/default.sh:/opt/ai-dock/bin/provisioning.sh
+      # - ./config/authorized_keys:/root/.ssh/authorized_keys_mount
+      # - ./config/provisioning/default.sh:/opt/ai-dock/bin/provisioning.sh
     ports:
       # SSH available on host machine port 2222 to avoid conflict. Change to suit
       - ${SSH_PORT_HOST:-2222}:22
