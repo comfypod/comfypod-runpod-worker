@@ -31,12 +31,12 @@ jobs:
       -
         name: Checkout
         uses: actions/checkout@v4
-      # -
-      #   name: Permissions fixes
-      #   run: |
-      #     reponame="$(basename ${GITHUB_REPOSITORY})"
-      #     target="${HOME}/work/${reponame}/${reponame}/build/COPY*"
-      #     chmod -R ug+rwX ${target}
+      -
+        name: Permissions fixes
+        run: |
+          reponame="$(basename ${GITHUB_REPOSITORY})"
+          target="${HOME}/work/${reponame}/${reponame}/build/COPY*"
+          chmod -R ug+rwX ${target}
       -
         name: Login to GitHub Container Registry
         uses: docker/login-action@v3
@@ -86,12 +86,12 @@ jobs:
       -
         name: Checkout
         uses: actions/checkout@v4
-      # -
-      #   name: Permissions fixes
-      #   run: |
-      #     reponame="$(basename ${GITHUB_REPOSITORY})"
-      #     target="${HOME}/work/${reponame}/${reponame}/build/COPY*"
-      #     chmod -R ug+rwX ${target}
+      -
+        name: Permissions fixes
+        run: |
+          reponame="$(basename ${GITHUB_REPOSITORY})"
+          target="${HOME}/work/${reponame}/${reponame}/build/COPY*"
+          chmod -R ug+rwX ${target}
       -
         name: Login to GitHub Container Registry
         uses: docker/login-action@v3
@@ -140,12 +140,12 @@ jobs:
       -
         name: Checkout
         uses: actions/checkout@v4
-      # -
-      #   name: Permissions fixes
-      #   run: |
-      #     reponame="$(basename ${GITHUB_REPOSITORY})"
-      #     target="${HOME}/work/${reponame}/${reponame}/build/COPY*"
-      #     chmod -R ug+rwX ${target}
+      -
+        name: Permissions fixes
+        run: |
+          reponame="$(basename ${GITHUB_REPOSITORY})"
+          target="${HOME}/work/${reponame}/${reponame}/build/COPY*"
+          chmod -R ug+rwX ${target}
       -
         name: Login to GitHub Container Registry
         uses: docker/login-action@v3
