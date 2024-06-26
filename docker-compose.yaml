@@ -23,8 +23,6 @@ services:
     volumes:
       ## Workspace
       - ./workspace:${WORKSPACE:-/workspace/}:rshared
-      - ./workspace/ComfyUI:/opt/ComfyUI:rshared
-      - ./workspace/serverless:/opt/serverless:rshared
       # You can share /workspace/storage with other non-ComfyUI containers. See README
       #- /path/to/common_storage:${WORKSPACE:-/workspace/}storage/:rshared
 
@@ -33,6 +31,7 @@ services:
       # - ./config/authorized_keys:/root/.ssh/authorized_keys_mount
       # - ./config/provisioning/default.sh:/opt/ai-dock/bin/provisioning.sh
     ports:
+      - 8000:8000
       # SSH available on host machine port 2222 to avoid conflict. Change to suit
       - ${SSH_PORT_HOST:-2222}:22
       # Caddy port for service portal
