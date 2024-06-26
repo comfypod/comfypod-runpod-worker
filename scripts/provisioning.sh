@@ -56,7 +56,6 @@ NODES=(
     "https://github.com/SLAPaper/ComfyUI-Image-Selector"
     "https://github.com/ssitu/ComfyUI_UltimateSDUpscale"
 )
-)
 
 CHECKPOINT_MODELS=(
     "https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.ckpt"
