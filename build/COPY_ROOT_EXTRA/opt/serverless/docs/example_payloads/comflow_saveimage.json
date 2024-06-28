@@ -1,8 +1,5 @@
 {
     "input": {
-      "status_endpoint": "https://webhook.site/4e4212eb-09b7-4264-9dc2-18daef4d19d7/api/update-run",
-      "file_upload_endpoint": "https://webhook.site/4e4212eb-09b7-4264-9dc2-18daef4d19d7/api/file-upload",
-      "webhook_url": "https://webhook.site/4e4212eb-09b7-4264-9dc2-18daef4d19d7/webhook",
       "workflow_api": {
         "2": {
           "inputs": {
